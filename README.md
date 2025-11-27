@@ -19,9 +19,9 @@ This program (`3x3 Minimax.c`) implements a Human-vs-AI game where the AI is unb
 * **Algorithm:** Uses the **Minimax** algorithm.
 * **Search:** Explores the *entire* game tree to find the optimal move. Because the 3x3 state space is small (~255,168 nodes), a full, exhaustive search is possible.
 * **Evaluation:** The AI recurses until it reaches a terminal (win/loss/draw) state. It then assigns a utility score:
-    * **+1:** AI Win
-    * **-1:** Human Win
-    * **0:** Draw
+    * **+1:** AI Win
+    * **-1:** Human Win
+    * **0:** Draw
 * **Result:** By propagating these scores back up the tree, the AI *always* chooses the move that leads to the best possible outcome (a win, or a draw if a win is impossible). This makes it mathematically unbeatable.
 
 
@@ -29,9 +29,7 @@ This program (`3x3 Minimax.c`) implements a Human-vs-AI game where the AI is unb
 [Image of Minimax algorithm game tree]
 
 
-> **[Image: Screenshot of the 3x3 AI forcing a draw or winning]**
->
-> *(**Developer Note:** Place a screenshot from `3x3 report.pdf` here to show the final board state of a draw or AI win.)*
+![Image: Screenshot of the 3x3 AI winning](.media/3x3_win.png)
 
 ---
 
@@ -47,13 +45,11 @@ A 7x7 board is computationally infeasible to solve with a full Minimax search. T
 
 
 2.  **Depth-Limited Search & Heuristic:**
-    * The search is limited to a fixed depth (`DEPTH 7` in the code) to ensure a move is found in a reasonable time.
-    * Because the search stops at non-terminal states (boards that aren't a win/loss/draw), a **heuristic evaluation function** is required to *estimate* how good a board is.
-    * **My Heuristic:** The `evaluateBoard` function calculates a score based on the **number of 4-in-a-row winning opportunities** a player has. An AI win is `+N` (where N is the number of ways it wins) and a player win is `-N`, allowing the AI to prefer moves that create multiple threats or block the opponent's threats.
+    * The search is limited to a fixed depth (`DEPTH 7` in the code) to ensure a move is found in a reasonable time.
+    * Because the search stops at non-terminal states (boards that aren't a win/loss/draw), a **heuristic evaluation function** is required to *estimate* how good a board is.
+    * **My Heuristic:** The `evaluateBoard` function calculates a score based on the **number of 4-in-a-row winning opportunities** a player has. An AI win is `+N` (where N is the number of ways it wins) and a player win is `-N`, allowing the AI to prefer moves that create multiple threats or block the opponent's threats.
 
-> **[Image: Screenshot of the 7x7 AI winning a game]**
->
-> *(**Developer Note:** Place a screenshot from `7x7 report.pdf` showing a final 4-in-a-row win for the AI.)*
+![Image: Screenshot of the 7x7 AI winning a game](.media/7x7_win.png)
 
 ---
 
