@@ -26,7 +26,7 @@ This program (`3x3 Minimax.c`) implements a Human-vs-AI game where the AI is unb
 
 
 
-![Image of Minimax algorithm game tree](.media/minimax.png)
+![Image: of Minimax algorithm game tree](.media/minimax.png)
 
 
 ![Image: Screenshot of the 3x3 AI winning](.media/3x3_win.png)
